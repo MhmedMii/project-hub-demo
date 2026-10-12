@@ -1,0 +1,13 @@
+from typing import Protocol
+
+from backend.business_rules.project import Project
+
+
+class ProjectStorage(Protocol):
+    def list(self) -> list[Project]: ...
+
+    def get(self, identifier: str) -> Project | None: ...
+
+    def save(self, project: Project) -> Project: ...
+
+    def remove(self, identifier: str) -> None: ...

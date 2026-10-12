@@ -1,0 +1,5 @@
+.account-menu { position: relative; }
+.account-menu summary { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 9px 13px; border-radius: 9px; color: var(--primary); background: var(--soft); cursor: pointer; list-style: none; font-weight: 500; }
+.account-menu summary::-webkit-details-marker { display: none; }
+.account-menu-panel { position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 4; display: grid; gap: 9px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); min-width: 220px; max-width: calc(100vw - 32px); }
+.account-menu-panel .button { justify-content: flex-start; }

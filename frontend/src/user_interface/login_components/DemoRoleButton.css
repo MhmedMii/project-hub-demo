@@ -1,0 +1,7 @@
+.demo-role { display: flex; align-items: center; gap: 15px; width: 100%; padding: 21px; border: 1px solid var(--border); border-radius: 12px; text-align: start; color: var(--text); background: var(--soft); }
+.demo-role--admin { background: var(--honey); }
+.demo-role > svg { color: var(--primary); }
+.demo-role > span { display: grid; gap: 6px; }
+.demo-role strong { font-size: 16px; font-weight: 600; }
+.demo-role > span > span { color: var(--muted); font-size: 13px; }
+.demo-role:hover:not(:disabled) { border-color: var(--primary); }

@@ -1,0 +1,5 @@
+.project-search { display: flex; align-items: center; gap: 10px; padding: 0 13px; flex: 1; min-width: 180px; border: 1px solid var(--border); border-radius: 11px; background: var(--surface); color: var(--muted); }
+.project-search input { width: 100%; min-width: 0; border: 0; padding: 13px 0; color: var(--text); background: transparent; outline-offset: 0; }
+.project-search input::placeholder { color: var(--muted); }
+.project-search:focus-within { outline: 3px solid var(--focus); outline-offset: 3px; }
+.project-search input:focus-visible { outline: none; }

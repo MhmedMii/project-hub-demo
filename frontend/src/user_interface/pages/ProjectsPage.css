@@ -1,0 +1,4 @@
+.project-filters { display: flex; align-items: stretch; gap: 12px; flex-wrap: wrap; }
+.project-count { font-size: 12px; color: var(--muted); margin: 16px 0; }
+.projects-footer { color: var(--muted); font-size: 12px; margin-top: 26px; }
+.manage-projects-link { display: inline-flex; align-items: center; min-height: 42px; border-radius: 9px; padding: 9px 14px; background: var(--primary); color: var(--on-primary); text-decoration: none; font-weight: 500; }

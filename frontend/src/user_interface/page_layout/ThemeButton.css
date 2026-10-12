@@ -1,0 +1,2 @@
+.theme-button { white-space: nowrap; }
+@media (max-width: 480px) { .theme-button > span { display: none; } }

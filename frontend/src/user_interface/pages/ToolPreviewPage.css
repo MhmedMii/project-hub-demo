@@ -1,0 +1,4 @@
+.tool-preview { display: grid; justify-items: center; gap: 18px; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 46px 24px; }
+.tool-preview > p { max-width: 550px; color: var(--muted); }
+.tool-preview .project-icon { width: 64px; height: 64px; }
+.tool-back-link { display: inline-flex; min-height: 44px; align-items: center; margin-top: 22px; }

@@ -1,0 +1,9 @@
+.data-table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--border); border-radius: 12px; }
+.data-table { width: 100%; min-width: 640px; border-collapse: collapse; background: var(--surface); }
+.data-table th { text-align: start; background: var(--soft); color: var(--muted); font-size: 12px; font-weight: 500; }
+.data-table td, .data-table th { padding: 16px; border-bottom: 1px solid var(--border); }
+.data-table tr:last-child td { border-bottom: 0; }
+.data-table td > small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.data-table .table-actions { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.data-table .table-actions .button { font-size: 12px; padding: 8px 10px; }
+.data-table .table-actions .button:disabled { cursor: not-allowed; }

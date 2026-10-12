@@ -1,0 +1,3 @@
+.select-field { display: grid; gap: 7px; min-width: 0; }
+.select-input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); background: var(--surface); }
+.select-input:disabled { background: var(--soft); opacity: .8; }

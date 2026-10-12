@@ -1,0 +1,2 @@
+.project-management { display: grid; gap: 18px; }
+.project-management-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }

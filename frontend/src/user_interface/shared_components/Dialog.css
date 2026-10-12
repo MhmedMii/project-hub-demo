@@ -1,0 +1,5 @@
+.dialog { width: min(680px, calc(100% - 32px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid var(--border); border-radius: 17px; color: var(--text); background: var(--surface); box-shadow: var(--shadow); }
+.dialog::backdrop { background: #132334a6; }
+.dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1; background: var(--surface); }
+.dialog-content { padding: 24px; }
+@media (max-width: 520px) { .dialog-heading { padding: 16px; } .dialog-content { padding: 20px 16px; } }

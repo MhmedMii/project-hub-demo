@@ -1,0 +1,50 @@
+[
+  {
+    "id": "demo-admin",
+    "name": "Demo Admin",
+    "email": "admin@demo.example",
+    "role": "admin",
+    "is_active": true,
+    "is_fixed": true
+  },
+  {
+    "id": "sample-admin",
+    "name": "Sample Admin",
+    "email": "sample-admin@demo.example",
+    "role": "admin",
+    "is_active": true,
+    "is_fixed": false
+  },
+  {
+    "id": "demo-counselor",
+    "name": "Demo Counselor",
+    "email": "counselor@demo.example",
+    "role": "counselor",
+    "is_active": true,
+    "is_fixed": false
+  },
+  {
+    "id": "sample-counselor-2",
+    "name": "Sample Counselor 2",
+    "email": "counselor-2@demo.example",
+    "role": "counselor",
+    "is_active": true,
+    "is_fixed": false
+  },
+  {
+    "id": "sample-counselor-3",
+    "name": "Sample Counselor 3",
+    "email": "counselor-3@demo.example",
+    "role": "counselor",
+    "is_active": true,
+    "is_fixed": false
+  },
+  {
+    "id": "sample-counselor-4",
+    "name": "Sample Counselor 4",
+    "email": "counselor-4@demo.example",
+    "role": "counselor",
+    "is_active": false,
+    "is_fixed": false
+  }
+]

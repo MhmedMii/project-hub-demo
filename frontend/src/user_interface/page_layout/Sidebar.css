@@ -1,0 +1,7 @@
+.sidebar { width: 190px; flex-shrink: 0; background: var(--sidebar); padding: 26px 16px 22px; display: flex; flex-direction: column; gap: 24px; }
+.sidebar nav { display: grid; gap: 8px; }
+.sidebar nav a { display: flex; align-items: center; gap: 10px; padding: 13px 12px; border-radius: 11px; text-decoration: none; color: var(--text); font-weight: 500; }
+.sidebar nav a.active { color: var(--primary); background: var(--selected); }
+.sidebar nav a:hover { background: var(--soft); }
+.sidebar-footer { margin-top: auto; display: flex; gap: 8px; border-top: 1px solid var(--border); padding-top: 18px; color: var(--muted); font-size: 12px; }
+@media (max-width: 760px) { .sidebar { width: 100%; padding: 10px 16px; } .sidebar nav { display: flex; flex-wrap: wrap; } .sidebar nav a { padding: 10px 12px; } .sidebar-footer { display: none; } }

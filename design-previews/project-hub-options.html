@@ -1,0 +1,180 @@
+<div class="viz-carousel" id="project-hub-designs" aria-label="Project Hub project hub design options">
+  <section data-variant="Workspace" aria-label="Workspace design"><div class="nh-app nh-workspace" id="nh-workspace"></div></section>
+  <section data-variant="Directory" aria-label="Directory design" hidden><div class="nh-app nh-directory" id="nh-directory"></div></section>
+  <section data-variant="Status board" aria-label="Status board design" hidden><div class="nh-app nh-board" id="nh-board"></div></section>
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&family=Cairo:wght@400;500;600;700&display=swap');
+#project-hub-designs .nh-app { --nh-navy:#1a3659; --nh-orange:#eb692e; --nh-bg:light-dark(#f3f6fa,#101c2b); --nh-panel:light-dark(#fff,#18293d); --nh-text:light-dark(#1a3659,#e6edf6); --nh-muted:light-dark(#596d84,#b2c0d1); --nh-border:light-dark(#d9e2ed,#34485f); --nh-soft:light-dark(#e9eff7,#23384f); --nh-live:light-dark(#176b48,#83dbb0); --nh-live-bg:light-dark(#e7f6ee,#173e32); --nh-maint:light-dark(#78550b,#f1cf7e); --nh-maint-bg:light-dark(#fff3d4,#443920); --nh-dev:light-dark(#a74418,#ffb38e); --nh-dev-bg:light-dark(#fff0e6,#4b2e21); --nh-grey:light-dark(#5f6874,#bdc6d1); --nh-grey-bg:light-dark(#edf0f3,#33404f); color-scheme:light dark; background:var(--nh-bg);color:var(--nh-text);font:14px/1.5 Inter,Cairo,sans-serif;min-height:740px; border-radius:16px;overflow:hidden;position:relative; }
+#project-hub-designs .nh-app[data-theme="light"] {color-scheme:light}
+#project-hub-designs .nh-app[data-theme="dark"] {color-scheme:dark}
+#project-hub-designs .nh-app[dir="rtl"] {font-family:Cairo,Inter,sans-serif}
+#project-hub-designs .nh-app * {box-sizing:border-box}
+#project-hub-designs .nh-app h1,#project-hub-designs .nh-app h2,#project-hub-designs .nh-app h3,#project-hub-designs .nh-app p {margin:0}
+#project-hub-designs .nh-app h1 {font:600 29px/1.25 Poppins,Cairo,sans-serif;letter-spacing:-.7px}
+#project-hub-designs .nh-app h2 {font-size:18px;font-weight:600}
+#project-hub-designs .nh-app h3 {font-size:15px;font-weight:600}
+#project-hub-designs .nh-app button,#project-hub-designs .nh-app input,#project-hub-designs .nh-app select {font:inherit;color:inherit}
+#project-hub-designs .nh-app button {cursor:pointer;border:1px solid var(--nh-border);background:var(--nh-panel);border-radius:8px;padding:8px 12px;min-height:38px}
+#project-hub-designs .nh-app button:hover {background:var(--nh-soft)}
+#project-hub-designs .nh-app button:focus-visible,#project-hub-designs .nh-app input:focus-visible,#project-hub-designs .nh-app select:focus-visible {outline:3px solid var(--nh-orange);outline-offset:3px}
+#project-hub-designs .nh-app .nh-primary {background:var(--nh-navy);border-color:var(--nh-navy);color:#fff}
+#project-hub-designs .nh-app .nh-primary:hover {background:#254c7b}
+#project-hub-designs .nh-app .nh-brand {display:flex;align-items:center;gap:10px;font:600 22px Poppins,Cairo,sans-serif;letter-spacing:-.8px;white-space:nowrap}
+#project-hub-designs .nh-app .nh-muted {color:var(--nh-muted)}
+#project-hub-designs .nh-app .nh-small {font-size:12px}
+#project-hub-designs .nh-app .nh-header {display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:22px 28px;background:var(--nh-panel);border-bottom:1px solid var(--nh-border);padding-inline-end:100px}
+#project-hub-designs .nh-app .nh-tools {display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+#project-hub-designs .nh-app .nh-header .nh-role {background:var(--nh-soft);border:0}
+#project-hub-designs .nh-app .nh-body {display:flex;min-height:646px}
+#project-hub-designs .nh-app .nh-sidebar {width:184px;flex-shrink:0;background:var(--nh-panel);padding:28px 16px;display:flex;flex-direction:column;gap:10px;border-inline-end:1px solid var(--nh-border)}
+#project-hub-designs .nh-app .nh-sidebar button {text-align:start;border:0;background:transparent}
+#project-hub-designs .nh-app .nh-active {background:var(--nh-soft)!important;font-weight:600;color:var(--nh-text)}
+#project-hub-designs .nh-app .nh-sidebar-footer {margin-top:auto;border-top:1px solid var(--nh-border);padding-top:16px}
+#project-hub-designs .nh-app .nh-nav {display:flex;gap:8px;padding:14px 28px;background:var(--nh-panel);border-bottom:1px solid var(--nh-border)}
+#project-hub-designs .nh-app .nh-nav button {border:0;background:transparent}
+#project-hub-designs .nh-app .nh-content {flex:1;min-width:0;padding:30px}
+#project-hub-designs .nh-app .nh-heading {display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:23px}
+#project-hub-designs .nh-app .nh-heading p {margin-top:8px;max-width:500px;color:var(--nh-muted)}
+#project-hub-designs .nh-app .nh-filters {display:flex;align-items:center;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+#project-hub-designs .nh-app .nh-search {flex:1;min-width:170px;position:relative}
+#project-hub-designs .nh-app .nh-search input {width:100%;padding:11px 13px;background:var(--nh-panel);border:1px solid var(--nh-border);border-radius:9px}
+#project-hub-designs .nh-app .nh-search input::placeholder {color:var(--nh-muted)}
+#project-hub-designs .nh-app select {background:var(--nh-panel);border:1px solid var(--nh-border);border-radius:8px;padding:10px;max-width:100%}
+#project-hub-designs .nh-app .nh-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#project-hub-designs .nh-app .nh-project {background:var(--nh-panel);border:1px solid var(--nh-border);border-radius:12px;padding:19px;display:flex;flex-direction:column;gap:14px}
+#project-hub-designs .nh-app .nh-project-top {display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+#project-hub-designs .nh-app .nh-icon {background:var(--nh-soft);border-radius:9px;width:38px;height:38px;display:grid;place-items:center;font-weight:600;font-size:13px;flex-shrink:0}
+#project-hub-designs .nh-app .nh-status {font-size:11px;border-radius:20px;padding:4px 9px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;width:fit-content}
+#project-hub-designs .nh-app .nh-status::before {content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
+#project-hub-designs .nh-app .nh-live {color:var(--nh-live);background:var(--nh-live-bg)}
+#project-hub-designs .nh-app .nh-maintenance {color:var(--nh-maint);background:var(--nh-maint-bg)}
+#project-hub-designs .nh-app .nh-development {color:var(--nh-dev);background:var(--nh-dev-bg)}
+#project-hub-designs .nh-app .nh-archived {color:var(--nh-grey);background:var(--nh-grey-bg)}
+#project-hub-designs .nh-app .nh-project p {color:var(--nh-muted);font-size:13px;min-height:38px}
+#project-hub-designs .nh-app .nh-project-bottom {display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+#project-hub-designs .nh-app .nh-open {border:0;background:var(--nh-soft);font-weight:500}
+#project-hub-designs .nh-directory .nh-content {max-width:960px;margin:auto;padding:34px}
+#project-hub-designs .nh-directory .nh-heading {padding-bottom:22px;border-bottom:3px solid var(--nh-orange)}
+#project-hub-designs .nh-app .nh-list {background:var(--nh-panel);border:1px solid var(--nh-border);border-radius:10px}
+#project-hub-designs .nh-app .nh-row {display:flex;align-items:center;gap:16px;padding:19px 20px;border-bottom:1px solid var(--nh-border)}
+#project-hub-designs .nh-app .nh-row:last-child {border-bottom:0}
+#project-hub-designs .nh-app .nh-row-main {flex:1;min-width:0}
+#project-hub-designs .nh-app .nh-row-main p {margin-top:4px;font-size:13px;color:var(--nh-muted)}
+#project-hub-designs .nh-app .nh-columns {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:start}
+#project-hub-designs .nh-app .nh-column-head {display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding:12px 0;border-bottom:2px solid var(--nh-border);gap:8px}
+#project-hub-designs .nh-app .nh-column {display:flex;flex-direction:column;gap:12px}
+#project-hub-designs .nh-app .nh-column .nh-project {padding:16px;border-radius:8px}
+#project-hub-designs .nh-board .nh-heading {border-inline-start:4px solid var(--nh-orange);padding-inline-start:18px}
+#project-hub-designs .nh-app .nh-login {display:grid;grid-template-columns:1fr 1fr;min-height:646px}
+#project-hub-designs .nh-app .nh-login-story {background:var(--nh-navy);color:#fff;padding:62px 44px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+#project-hub-designs .nh-app .nh-login-story h1 {font-size:34px;max-width:320px}
+#project-hub-designs .nh-app .nh-login-story p {color:#ccd8e6;max-width:330px}
+#project-hub-designs .nh-app .nh-login-story .nh-line {width:48px;height:5px;background:var(--nh-orange)}
+#project-hub-designs .nh-app .nh-login-choice {display:flex;flex-direction:column;justify-content:center;padding:44px;gap:16px;background:var(--nh-panel)}
+#project-hub-designs .nh-app .nh-login-choice .nh-option {display:flex;text-align:start;flex-direction:column;gap:6px;padding:20px;white-space:normal}
+#project-hub-designs .nh-app .nh-login-choice .nh-option strong {font-size:16px;font-weight:600}
+#project-hub-designs .nh-directory .nh-login {display:flex;flex-direction:column;align-items:center;padding:36px 20px;gap:25px;background:var(--nh-bg)}
+#project-hub-designs .nh-directory .nh-login-story {background:transparent;color:var(--nh-text);padding:0;text-align:center;align-items:center}
+#project-hub-designs .nh-directory .nh-login-story p {color:var(--nh-muted)}
+#project-hub-designs .nh-directory .nh-login-choice {max-width:490px;width:100%;border:1px solid var(--nh-border);border-radius:12px;padding:28px}
+#project-hub-designs .nh-board .nh-login {grid-template-columns:1.25fr 1fr}
+#project-hub-designs .nh-app .nh-admin-tabs {display:flex;gap:8px;margin-bottom:22px}
+#project-hub-designs .nh-app .nh-admin-tabs button[aria-pressed="true"] {background:var(--nh-soft);font-weight:600}
+#project-hub-designs .nh-app .nh-table {width:100%;border-collapse:collapse;background:var(--nh-panel);text-align:start}
+#project-hub-designs .nh-app .nh-table th {font-size:12px;color:var(--nh-muted);font-weight:500;background:var(--nh-soft)}
+#project-hub-designs .nh-app .nh-table th,#project-hub-designs .nh-app .nh-table td {padding:15px;text-align:start;border-bottom:1px solid var(--nh-border)}
+#project-hub-designs .nh-app .nh-table td small {display:block;color:var(--nh-muted)}
+#project-hub-designs .nh-app .nh-table-wrap {overflow-x:auto;border:1px solid var(--nh-border);border-radius:10px}
+#project-hub-designs .nh-app .nh-dialog {position:absolute;inset:0;background:#101c2bbb;z-index:2;display:grid;place-items:start center;padding:100px 20px}
+#project-hub-designs .nh-app .nh-dialog-panel {max-width:420px;width:100%;background:var(--nh-panel);border:1px solid var(--nh-border);border-radius:14px;padding:25px;display:flex;flex-direction:column;gap:18px}
+#project-hub-designs .nh-app .nh-empty {padding:35px;text-align:center;color:var(--nh-muted)}
+#project-hub-designs .nh-app .nh-demo-footer {margin-top:24px;font-size:12px;color:var(--nh-muted)}
+@media(max-width:750px){#project-hub-designs .nh-app{min-height:1150px}#project-hub-designs .nh-app .nh-sidebar{width:150px}#project-hub-designs .nh-app .nh-content{padding:22px}#project-hub-designs .nh-app .nh-columns{grid-template-columns:1fr}#project-hub-designs .nh-app .nh-login-story{padding:36px 24px}#project-hub-designs .nh-app .nh-login-choice{padding:28px}#project-hub-designs .nh-app .nh-row{flex-wrap:wrap}#project-hub-designs .nh-app .nh-row-main{flex-basis:calc(100% - 55px)}}
+@media(max-width:520px){#project-hub-designs .nh-app{min-height:1430px}#project-hub-designs .nh-app .nh-header{padding:22px 16px;padding-inline-end:95px;gap:12px}#project-hub-designs .nh-app .nh-header .nh-tools{flex-basis:100%}#project-hub-designs .nh-app .nh-body{display:block}#project-hub-designs .nh-app .nh-sidebar{width:100%;padding:12px 16px;flex-direction:row;border-inline-end:0;border-bottom:1px solid var(--nh-border)}#project-hub-designs .nh-app .nh-sidebar-footer{display:none}#project-hub-designs .nh-app .nh-content{padding:22px 16px}#project-hub-designs .nh-app .nh-grid{grid-template-columns:1fr}#project-hub-designs .nh-app .nh-login{display:flex;flex-direction:column}#project-hub-designs .nh-app .nh-login-story{padding:38px 24px}#project-hub-designs .nh-app .nh-login-story h1{font-size:29px}#project-hub-designs .nh-app .nh-login-choice{padding:28px 24px}#project-hub-designs .nh-app .nh-heading{flex-wrap:wrap}#project-hub-designs .nh-app .nh-row{padding:16px}#project-hub-designs .nh-app button{min-height:44px}#project-hub-designs .nh-app .nh-dialog{padding:150px 15px}#project-hub-designs .nh-app .nh-table th,#project-hub-designs .nh-app .nh-table td{padding:10px}}
+/* ألوان متناسقة: أزرق مع لمسة عسلي خفيفة */
+#project-hub-designs .nh-workspace {--nh-navy:#245a8d;--nh-orange:#ba8232;--nh-bg:light-dark(#f5f8fc,#132334);--nh-panel:light-dark(#ffffff,#1a2e42);--nh-text:light-dark(#284055,#e7eff9);--nh-muted:light-dark(#60758a,#b5c8dc);--nh-soft:light-dark(#e6f1fa,#29445f);--nh-border:light-dark(#dde7f0,#36516d)}
+#project-hub-designs .nh-workspace .nh-header {padding-block:20px}
+#project-hub-designs .nh-workspace .nh-brand {color:light-dark(#245a8d,#b7d9f5)}
+#project-hub-designs .nh-workspace .nh-header .nh-role {background:light-dark(#e6f1fa,#29445f);color:light-dark(#245a8d,#b7d9f5)}
+#project-hub-designs .nh-workspace .nh-sidebar {background:light-dark(#edf4fa,#1b3248);border:0;padding-top:28px}
+#project-hub-designs .nh-workspace .nh-sidebar .nh-active {background:light-dark(#cbdff0,#315574)!important;color:light-dark(#245a8d,#d3e9fb);border-radius:12px}
+#project-hub-designs .nh-workspace .nh-content {padding:26px}
+#project-hub-designs .nh-workspace .nh-heading {padding:25px;border-radius:16px;background:light-dark(#fff1d5,#473b23);margin-bottom:20px}
+#project-hub-designs .nh-workspace .nh-heading h1 {font-size:27px;color:light-dark(#40566a,#f6e6c4);letter-spacing:-.5px}
+#project-hub-designs .nh-workspace .nh-heading p {color:light-dark(#60758a,#dacdac);margin-top:9px}
+#project-hub-designs .nh-workspace .nh-filters {margin-bottom:20px}
+#project-hub-designs .nh-workspace .nh-search input {min-height:46px;border-radius:12px;font-size:14px}
+#project-hub-designs .nh-workspace .nh-filters select {min-height:46px;border-radius:12px}
+#project-hub-designs .nh-workspace .nh-project {--nh-tool-fill:light-dark(#e6f1fa,#29445f);--nh-tool-ink:light-dark(#245a8d,#b7d9f5);--nh-tool-card:var(--nh-panel);border-radius:15px;padding:0;gap:0;overflow:hidden;background:var(--nh-tool-card);border-color:var(--nh-border)}
+#project-hub-designs .nh-workspace .nh-project-top {padding:18px 18px 0;background:transparent;align-items:center;min-height:60px}
+#project-hub-designs .nh-workspace .nh-icon {background:var(--nh-tool-fill);color:var(--nh-tool-ink);width:42px;height:42px;border-radius:12px}
+#project-hub-designs .nh-workspace .nh-icon svg {width:25px;height:25px;stroke-width:1.8}
+#project-hub-designs .nh-workspace .nh-status {font-size:12px;padding:5px 10px;font-weight:500}
+#project-hub-designs .nh-workspace .nh-project h3 {padding:14px 18px 0;font-size:16px;font-weight:600}
+#project-hub-designs .nh-workspace .nh-project p {padding:8px 18px 0;min-height:56px;font-size:13px;line-height:1.55}
+#project-hub-designs .nh-workspace .nh-project-bottom {padding:16px 18px;gap:12px}
+#project-hub-designs .nh-workspace .nh-open {background:var(--nh-tool-ink);color:light-dark(#fff,#18344e);border-radius:9px;min-height:40px;padding:9px 14px;font-weight:500}
+#project-hub-designs .nh-workspace .nh-open:hover {filter:brightness(.93);background:var(--nh-tool-ink)}
+#project-hub-designs .nh-workspace .nh-project-bottom .nh-muted {font-size:12px}
+#project-hub-designs .nh-workspace .nh-login-story {background:#245a8d}
+#project-hub-designs .nh-workspace .nh-login-choice .nh-option:nth-of-type(1) {background:light-dark(#e6f1fa,#29445f)}
+#project-hub-designs .nh-workspace .nh-login-choice .nh-option:nth-of-type(2) {background:light-dark(#fff1d5,#473b23)}
+@media(max-width:520px){#project-hub-designs .nh-workspace .nh-content{padding:20px 16px}#project-hub-designs .nh-workspace .nh-heading{padding:20px}#project-hub-designs .nh-workspace .nh-heading h1{font-size:25px}#project-hub-designs .nh-workspace .nh-project-bottom{flex-wrap:wrap}#project-hub-designs .nh-workspace .nh-open{min-height:44px}}
+</style>
+<script>
+(() => {
+ const root=document.getElementById('project-hub-designs');
+ const projects=[
+  {id:'planner',en:'Counselor Planner',ar:'مخطط المرشد',desc:'Plan sessions and organize your counseling week.',descAr:'رتّب الجلسات ونظّم أسبوعك الإرشادي.',status:'live',icon:'CP',category:'Session planning',categoryAr:'تخطيط الجلسات'},
+  {id:'resources',en:'Resource Library',ar:'مكتبة الموارد',desc:'Find worksheets and resources for your sessions.',descAr:'ابحث عن أوراق العمل والموارد لجلساتك.',status:'live',icon:'RL',category:'Resources',categoryAr:'الموارد'},
+  {id:'intake',en:'Intake Builder',ar:'منشئ نماذج الاستقبال',desc:'Prepare a clear intake form for each new referral.',descAr:'جهّز نموذج استقبال واضح لكل إحالة جديدة.',status:'live',icon:'IB',category:'Intake',categoryAr:'الاستقبال'},
+  {id:'followup',en:'Follow-up Tracker',ar:'متابعة الجلسات',desc:'Keep track of follow-ups after each session.',descAr:'تابع الخطوات القادمة بعد كل جلسة.',status:'maintenance',icon:'FT',category:'Follow-ups',categoryAr:'المتابعة'},
+  {id:'workshops',en:'Workshop Studio',ar:'استوديو ورش العمل',desc:'Build activities for the next team workshop.',descAr:'حضّر الأنشطة لورشة عمل الفريق القادمة.',status:'development',icon:'WS',category:'Workshops',categoryAr:'ورش العمل'},
+  {id:'archive',en:'Legacy Session Log',ar:'سجل الجلسات السابق',desc:'An earlier version of the session log.',descAr:'نسخة سابقة من سجل الجلسات.',status:'archived',icon:'SL',category:'Records',categoryAr:'السجلات'}
+ ];
+ const words={
+  projects:['Projects','المشاريع'],admin:['Administration','الإدارة'],login:['Demo login','دخول تجريبي'],counselor:['Counselor demo','تجربة المرشد'],administrator:['Admin demo','تجربة المسؤول'],theme:['Dark mode','الوضع الداكن'],light:['Light mode','الوضع الفاتح'],all:['All statuses','كل الحالات'],live:['Live','متاح'],maintenance:['Maintenance','صيانة'],development:['In development','قيد التطوير'],archived:['Archived','مؤرشف'],heading:['Your team’s tools, in one place.','أدوات فريقك، في مكان واحد.'],intro:['Find a tool, check its status, and get started.','اختر أداة، وتحقّق من حالتها، وابدأ.'],search:['Search projects…','ابحث عن مشروع…'],open:['Open tool','فتح الأداة'],demo:['Demo · Fictional projects and accounts','نسخة تجريبية · مشاريع وحسابات وهمية'],choose:['Choose your demo role','اختر دورك في التجربة'],chooseDesc:['Explore the hub as a counselor or an administrator.','تصفّح المنصة كمرشد أو مسؤول.'],counselorDesc:['Browse projects, search, and open tools.','تصفّح المشاريع وابحث وافتح الأدوات.'],adminDesc:['Manage projects and team access.','أدِر المشاريع وصلاحيات الفريق.'],restart:['Changes reset when the demo restarts.','تُعاد البيانات الأصلية عند إعادة تشغيل النسخة التجريبية.'],team:['People','الأشخاص'],manage:['Manage your project hub','أدِر منصة مشاريعك'],manageDesc:['Keep the directory current and manage team access.','حدّث دليل المشاريع وأدِر صلاحيات الفريق.'],add:['Add project','إضافة مشروع'],addPerson:['Add person','إضافة شخص'],name:['Project','المشروع'],status:['Status','الحالة'],actions:['Actions','الإجراءات'],edit:['Edit','تعديل'],remove:['Remove','إزالة'],close:['Close','إغلاق'],private:['Private note','ملاحظة خاصة'],note:['Demo note: review with the team before the next update.','ملاحظة تجريبية: راجع مع الفريق قبل التحديث القادم.'],empty:['No matching projects. Try another search.','لا توجد مشاريع مطابقة. جرّب بحثاً آخر.'],email:['Email','البريد الإلكتروني'],role:['Role','الدور'],person:['Name','الاسم'],fixed:['Fixed admin','مسؤول ثابت'],counselorRole:['Counselor','مرشد'],adminRole:['Admin','مسؤول'],destination:['Demo tool preview','معاينة الأداة التجريبية'],destinationText:['This is a fictional project for the design preview.','هذا مشروع وهمي لمعاينة التصميم.'],save:['Save changes','حفظ التغييرات'],cancel:['Cancel','إلغاء'],editPreview:['Edit project','تعديل المشروع'],addPreview:['Add a project','إضافة مشروع'],personPreview:['Add a team member','إضافة عضو للفريق']
+ };
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const models=[];
+ for(const [index,type] of ['workspace','directory','board'].entries()){
+  const app=root.querySelector('#nh-'+type);
+  const saved=window.openai?.widgetState?.privateContent?.views?.[index];
+  const model={type,app,index,ar:!!saved?.ar,dark:!!saved?.dark,role:saved?.role==='admin'?'admin':'counselor',page:['projects','login','admin'].includes(saved?.page)?saved.page:'projects',tab:'projects',query:'',filter:'all',dialog:null,compact:false};
+  models.push(model);
+  const t=k=>words[k]?.[model.ar?1:0]||k;
+  const text=p=>p[model.ar?'ar':'en'];
+  const desc=p=>p[model.ar?'descAr':'desc'];
+  const badge=s=>`<span class="nh-status nh-${s}">${t(s)}</span>`;
+  const button=(label,action,cls='')=>`<button type="button" class="${cls}" data-action="${action}">${label}</button>`;
+  const persist=()=>{if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{designPreviews:models.map(m=>({design:m.type,language:m.ar?'Arabic':'English',role:m.role,screen:m.page}))},privateContent:{views:models.map(m=>({ar:m.ar,dark:m.dark,role:m.role,page:m.page}))}}).catch(()=>{});};
+  function card(p){return `<article class="nh-project" data-tool="${p.id}"><div class="nh-project-top"><span class="nh-icon" aria-hidden="true"><i data-lucide="${({planner:"calendar-days",resources:"library-big",intake:"clipboard-list",followup:"bell",workshops:"palette",archive:"archive"})[p.id]}"></i></span>${badge(p.status)}</div><h3>${text(p)}</h3><p>${desc(p)}</p><div class="nh-project-bottom"><span class="nh-muted nh-small">${p[model.ar?'categoryAr':'category']}</span>${button(t('open'),'open:'+p.id,'nh-open')}</div></article>`;}
+  function filtered(){return projects.filter(p=>(model.role==='admin'||p.status!=='archived')&&(model.filter==='all'||p.status===model.filter)&&`${text(p)} ${desc(p)}`.toLocaleLowerCase().includes(model.query.toLocaleLowerCase()));}
+  function results(){const list=filtered();if(!list.length)return `<div class="nh-empty">${t('empty')}</div>`;if(type==='directory')return `<div class="nh-list">${list.map(p=>`<article class="nh-row"><span class="nh-icon" aria-hidden="true"><i data-lucide="${({planner:"calendar-days",resources:"library-big",intake:"clipboard-list",followup:"bell",workshops:"palette",archive:"archive"})[p.id]}"></i></span><div class="nh-row-main"><h3>${text(p)}</h3><p>${desc(p)}</p></div>${badge(p.status)}${button(t('open'),'open:'+p.id,'nh-open')}</article>`).join('')}</div>`;if(type==='board')return `<div class="nh-columns">${['live','maintenance','development',...(model.role==='admin'?['archived']:[])].filter(s=>model.filter==='all'||model.filter===s).map(s=>`<section><div class="nh-column-head">${badge(s)}<span class="nh-muted nh-small">${list.filter(p=>p.status===s).length}</span></div><div class="nh-column">${list.filter(p=>p.status===s).map(card).join('')}</div></section>`).join('')}</div>`;return `<div class="nh-grid">${list.map(card).join('')}</div>`;}
+  function filters(){return `<div class="nh-filters"><label class="nh-search"><span class="sr-only">${t('search')}</span><input data-field="search" aria-label="${t('search')}" placeholder="${t('search')}" value="${esc(model.query)}"></label><select data-field="filter" aria-label="${t('status')}">${['all','live','maintenance','development',...(model.role==='admin'?['archived']:[])].map(s=>`<option value="${s}" ${model.filter===s?'selected':''}>${t(s)}</option>`).join('')}</select></div>`;}
+  function projectPage(){return `<div class="nh-heading"><div><h1>${model.ar?'أدواتك ومشاريعك':'Your project toolbox'}</h1><p>${t('intro')}</p></div>${model.role==='admin'?button(t('add'),'add','nh-primary'):''}</div>${filters()}<div data-results aria-live="polite">${results()}</div><p class="nh-demo-footer">${t('demo')}</p>`;}
+  function adminPage(){const people=[['Maya Salem','maya@example.com','adminRole','fixed'],['Omar Nasser','omar@example.com','adminRole',''],['Dana Ali','dana@example.com','counselorRole',''],['Noor Ahmad','noor@example.com','counselorRole','']];return `<div class="nh-heading"><div><h1>${t('manage')}</h1><p>${t('manageDesc')}</p></div>${button(t(model.tab==='projects'?'add':'addPerson'),model.tab==='projects'?'add':'add-person','nh-primary')}</div><div class="nh-admin-tabs">${['projects','team'].map(tab=>`<button type="button" data-action="tab:${tab}" aria-pressed="${model.tab===tab}">${t(tab)}</button>`).join('')}</div><div class="nh-table-wrap">${model.tab==='projects'?`<table class="nh-table"><thead><tr><th>${t('name')}</th><th>${t('status')}</th><th>${t('actions')}</th></tr></thead><tbody>${projects.map(p=>`<tr><td>${text(p)}<small>${p[model.ar?'categoryAr':'category']}</small></td><td>${badge(p.status)}</td><td>${button(t('edit'),'edit:'+p.id)}</td></tr>`).join('')}</tbody></table>`:`<table class="nh-table"><thead><tr><th>${t('person')}</th><th>${t('role')}</th><th>${t('actions')}</th></tr></thead><tbody>${people.map(([n,e,r,f])=>`<tr><td>${n}<small>${e}</small></td><td>${t(r)}</td><td>${f?`<span class="nh-muted nh-small">${t(f)}</span>`:button(t('edit'),'person:'+e)}</td></tr>`).join('')}</tbody></table>`}</div><p class="nh-demo-footer">${t('restart')}</p>`;}
+  function loginPage(){return `<div class="nh-login"><div class="nh-login-story"><div class="nh-line"></div><h1>${t('heading')}</h1><p>${t('intro')}</p></div><div class="nh-login-choice"><h2>${t('choose')}</h2><p class="nh-muted">${t('chooseDesc')}</p>${button(`<strong>${t('counselor')}</strong><span class="nh-muted">${t('counselorDesc')}</span>`,'role:counselor','nh-option')}${button(`<strong>${t('administrator')}</strong><span class="nh-muted">${t('adminDesc')}</span>`,'role:admin','nh-option')}<p class="nh-muted nh-small">${t('restart')}</p></div></div>`;}
+  function dialog(){if(!model.dialog)return '';const p=projects.find(p=>p.id===model.dialog.id);const editing=model.dialog.kind==='edit';return `<div class="nh-dialog"><section class="nh-dialog-panel" role="dialog" aria-modal="true" aria-label="${t(editing?'editPreview':'destination')}"><h2>${p?text(p):t(model.dialog.kind==='add-person'?'personPreview':'addPreview')}</h2>${p?badge(p.status):''}<p class="nh-muted">${t(model.dialog.kind==='open'?'destinationText':'restart')}</p>${editing?`<label>${t('status')}<select data-field="edit-status">${['live','maintenance','development','archived'].map(s=>`<option value="${s}" ${p.status===s?'selected':''}>${t(s)}</option>`).join('')}</select></label><h3>${t('private')}</h3><p class="nh-muted">${t('note')}</p>`:''}<div class="nh-tools">${editing?button(t('save'),'save','nh-primary'):''}${button(t('close'),'close')}</div></section></div>`;}
+  function render(){app.setAttribute('dir',model.ar?'rtl':'ltr');app.setAttribute('lang',model.ar?'ar':'en');app.dataset.theme=model.dark?'dark':'light';app.style.setProperty('--nh-card-gap',model.compact?'10px':'14px');const nav=`${button(t('projects'),'page:projects',model.page==='projects'?'nh-active':'')}${model.role==='admin'?button(t('admin'),'page:admin',model.page==='admin'?'nh-active':''):''}`;app.innerHTML=`<header class="nh-header"><div class="nh-brand"><span>Project Hub<span class="nh-muted nh-small" style="display:block;letter-spacing:0;font-family:Inter,Cairo,sans-serif;font-weight:400">${model.ar?'بيئة تجريبية':'Demo workspace'}</span></span></div><div class="nh-tools">${button(model.ar?'English':'العربية','language')}${button(t(model.dark?'light':'theme'),'theme')}${button(t(model.role==='admin'?'administrator':'counselor'),'page:login','nh-role')}</div></header>${model.page==='login'?loginPage():type==='workspace'?`<div class="nh-body"><nav class="nh-sidebar" aria-label="${t('projects')}">${nav}<div class="nh-sidebar-footer"><p class="nh-muted nh-small">${t('demo')}</p></div></nav><main class="nh-content">${model.page==='admin'?adminPage():projectPage()}</main></div>`:`<nav class="nh-nav" aria-label="${t('projects')}">${nav}</nav><main class="nh-content">${model.page==='admin'?adminPage():projectPage()}</main>`}${dialog()}`;const cols=app.querySelector('.nh-columns');if(cols&&model.role==='admin'&&model.filter==='all'&&window.innerWidth>750)cols.style.gridTemplateColumns='repeat(4,minmax(0,1fr))';app.querySelectorAll('.nh-grid').forEach(el=>el.style.gap=model.compact?'10px':'14px');}
+  app.addEventListener('click',event=>{const b=event.target.closest('button[data-action]');if(!b)return;const [action,arg]=b.dataset.action.split(':');if(action==='language')model.ar=!model.ar;if(action==='theme')model.dark=!model.dark;if(action==='page'){model.page=arg==='admin'&&model.role!=='admin'?'projects':arg;model.dialog=null;}if(action==='role'){model.role=arg;model.page='projects';model.filter='all';model.query='';}if(action==='tab')model.tab=arg;if(['open','edit'].includes(action))model.dialog={kind:action,id:arg};if(['add','add-person','person'].includes(action))model.dialog={kind:action,id:null};if(action==='close')model.dialog=null;if(action==='save'){const p=projects.find(p=>p.id===model.dialog?.id);if(p)p.status=app.querySelector('[data-field="edit-status"]').value;model.dialog=null;}render();if(typeof lucide !== 'undefined')lucide.createIcons({attrs:{width:24,height:24}});persist();if(model.dialog)app.querySelector('.nh-dialog button')?.focus();});
+  app.addEventListener('input',event=>{if(event.target.dataset.field==='search'){model.query=event.target.value;app.querySelector('[data-results]').innerHTML=results();if(typeof lucide !== 'undefined')lucide.createIcons({attrs:{width:24,height:24}});}});
+  app.addEventListener('change',event=>{if(event.target.dataset.field==='filter'){model.filter=event.target.value;app.querySelector('[data-results]').innerHTML=results();if(typeof lucide !== 'undefined')lucide.createIcons({attrs:{width:24,height:24}});}});
+  app.addEventListener('keydown',event=>{if(event.key==='Escape'&&model.dialog){model.dialog=null;render();}});
+  render();
+  if(typeof lucide !== 'undefined')lucide.createIcons({attrs:{width:24,height:24}});
+  if(globalThis.Tweak){const tweak=new Tweak({container:app,onChange:render});tweak.addToggle(model,'compact',{label:'Compact card spacing'});}
+  model.render=render;
+ }
+ window.addEventListener('openai:set_globals',event=>{const views=event.detail?.globals?.widgetState?.privateContent?.views;if(!views)return;models.forEach((m,i)=>{if(!views[i])return;const v=views[i];m.ar=!!v.ar;m.dark=!!v.dark;m.role=v.role==='admin'?'admin':'counselor';m.page=['projects','login','admin'].includes(v.page)?v.page:'projects';m.render();});});
+ const iconCache=new Map();
+ const restoreIcons=()=>root.querySelectorAll('[data-lucide]').forEach(el=>{
+  const name=el.getAttribute('data-lucide');
+  if(el.tagName.toLowerCase()==='svg')iconCache.set(name,el.cloneNode(true));
+  else if(iconCache.has(name))el.replaceWith(iconCache.get(name).cloneNode(true));
+ });
+ restoreIcons();
+ new MutationObserver(restoreIcons).observe(root,{childList:true,subtree:true});
+})();
+</script>

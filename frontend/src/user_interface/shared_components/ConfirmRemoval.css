@@ -1,0 +1,2 @@
+.removal-content { display: grid; gap: 17px; }
+.removal-content > strong { overflow-wrap: anywhere; }

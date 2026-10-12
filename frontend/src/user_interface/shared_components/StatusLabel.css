@@ -1,0 +1,6 @@
+.status-label { display: inline-flex; align-items: center; gap: 6px; width: fit-content; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.status-label > span { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.status-label--live, .status-label--active { color: var(--live-text); background: var(--live-bg); }
+.status-label--maintenance { color: var(--maintenance-text); background: var(--maintenance-bg); }
+.status-label--development { color: var(--development-text); background: var(--development-bg); }
+.status-label--archived, .status-label--disabled { color: var(--archived-text); background: var(--archived-bg); }

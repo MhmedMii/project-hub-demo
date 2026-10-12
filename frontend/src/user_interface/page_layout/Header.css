@@ -1,0 +1,9 @@
+.header { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 22px 30px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.brand { display: grid; gap: 2px; text-decoration: none; color: var(--primary); }
+.brand strong { font: 600 25px/1.2 Poppins, sans-serif; letter-spacing: -.6px; }
+.brand span { font-size: 12px; color: var(--muted); }
+html[lang="ar"] .brand strong { font-family: Cairo, sans-serif; letter-spacing: 0; }
+.header-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.header-error { flex-basis: 100%; }
+@media (max-width: 620px) { .header { padding: 18px 16px; gap: 14px; } .brand strong { font-size: 22px; } }
+@media (max-width: 380px) { .header-controls { width: 100%; } }

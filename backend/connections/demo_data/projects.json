@@ -1,0 +1,242 @@
+[
+  {
+    "id": "counselor-planner",
+    "title": {
+      "en": "Counselor Planner",
+      "ar": "مخطط المرشد"
+    },
+    "description": {
+      "en": "Plan sessions and organize your counseling week.",
+      "ar": "رتّب الجلسات ونظّم أسبوعك الإرشادي."
+    },
+    "category": {
+      "en": "Session planning",
+      "ar": "تخطيط الجلسات"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/counselor-planner",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "resource-library",
+    "title": {
+      "en": "Resource Library",
+      "ar": "مكتبة الموارد"
+    },
+    "description": {
+      "en": "Find worksheets and resources for your sessions.",
+      "ar": "ابحث عن أوراق العمل والموارد لجلساتك."
+    },
+    "category": {
+      "en": "Resources",
+      "ar": "الموارد"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/resource-library",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "intake-builder",
+    "title": {
+      "en": "Intake Builder",
+      "ar": "منشئ نماذج الاستقبال"
+    },
+    "description": {
+      "en": "Prepare a clear intake form for each new referral.",
+      "ar": "جهّز نموذج استقبال واضح لكل إحالة جديدة."
+    },
+    "category": {
+      "en": "Intake",
+      "ar": "الاستقبال"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/intake-builder",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "wellbeing-checkin",
+    "title": {
+      "en": "Wellbeing Check-in",
+      "ar": "متابعة العافية"
+    },
+    "description": {
+      "en": "Explore a fictional check-in template for your sessions.",
+      "ar": "تصفّح نموذجاً وهمياً لمتابعة الجلسات."
+    },
+    "category": {
+      "en": "Wellbeing",
+      "ar": "العافية"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/wellbeing-checkin",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "session-notes",
+    "title": {
+      "en": "Session Notes",
+      "ar": "ملاحظات الجلسات"
+    },
+    "description": {
+      "en": "Explore a sample workspace for organized session notes.",
+      "ar": "تصفّح مساحة تجريبية لتنظيم ملاحظات الجلسات."
+    },
+    "category": {
+      "en": "Records",
+      "ar": "السجلات"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/session-notes",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "team-calendar",
+    "title": {
+      "en": "Team Calendar",
+      "ar": "تقويم الفريق"
+    },
+    "description": {
+      "en": "See a fictional calendar for team sessions and events.",
+      "ar": "تصفّح تقويماً وهمياً لجلسات الفريق وفعالياته."
+    },
+    "category": {
+      "en": "Planning",
+      "ar": "التخطيط"
+    },
+    "status": "live",
+    "tool_path": "/demo/tools/team-calendar",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "followup-tracker",
+    "title": {
+      "en": "Follow-up Tracker",
+      "ar": "متابعة الجلسات"
+    },
+    "description": {
+      "en": "Keep track of follow-ups after each session.",
+      "ar": "تابع الخطوات القادمة بعد كل جلسة."
+    },
+    "category": {
+      "en": "Follow-ups",
+      "ar": "المتابعة"
+    },
+    "status": "maintenance",
+    "tool_path": "/demo/tools/followup-tracker",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "referral-board",
+    "title": {
+      "en": "Referral Board",
+      "ar": "لوحة الإحالات"
+    },
+    "description": {
+      "en": "Explore a sample referral overview for the team.",
+      "ar": "تصفّح عرضاً تجريبياً لإحالات الفريق."
+    },
+    "category": {
+      "en": "Referrals",
+      "ar": "الإحالات"
+    },
+    "status": "maintenance",
+    "tool_path": "/demo/tools/referral-board",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "workshop-studio",
+    "title": {
+      "en": "Workshop Studio",
+      "ar": "استوديو ورش العمل"
+    },
+    "description": {
+      "en": "Build activities for the next team workshop.",
+      "ar": "حضّر الأنشطة لورشة عمل الفريق القادمة."
+    },
+    "category": {
+      "en": "Workshops",
+      "ar": "ورش العمل"
+    },
+    "status": "development",
+    "tool_path": "/demo/tools/workshop-studio",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "progress-notebook",
+    "title": {
+      "en": "Progress Notebook",
+      "ar": "دفتر التقدم"
+    },
+    "description": {
+      "en": "A fictional notebook for upcoming progress summaries.",
+      "ar": "دفتر وهمي لملخصات التقدم القادمة."
+    },
+    "category": {
+      "en": "Planning",
+      "ar": "التخطيط"
+    },
+    "status": "development",
+    "tool_path": "/demo/tools/progress-notebook",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "legacy-session-log",
+    "title": {
+      "en": "Legacy Session Log",
+      "ar": "سجل الجلسات السابق"
+    },
+    "description": {
+      "en": "An earlier fictional version of the session log.",
+      "ar": "نسخة وهمية سابقة من سجل الجلسات."
+    },
+    "category": {
+      "en": "Records",
+      "ar": "السجلات"
+    },
+    "status": "archived",
+    "tool_path": "/demo/tools/legacy-session-log",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  },
+  {
+    "id": "legacy-resource-index",
+    "title": {
+      "en": "Legacy Resource Index",
+      "ar": "فهرس الموارد السابق"
+    },
+    "description": {
+      "en": "An archived fictional resource index.",
+      "ar": "فهرس موارد وهمي مؤرشف."
+    },
+    "category": {
+      "en": "Resources",
+      "ar": "الموارد"
+    },
+    "status": "archived",
+    "tool_path": "/demo/tools/legacy-resource-index",
+    "private_notes": "Fictional admin note: review this sample with the demo team.",
+    "created_at": "2026-10-01T09:00:00+00:00",
+    "updated_at": "2026-10-12T08:00:00+00:00"
+  }
+]

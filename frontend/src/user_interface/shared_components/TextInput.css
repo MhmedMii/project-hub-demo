@@ -1,0 +1,5 @@
+.text-field { display: grid; gap: 7px; min-width: 0; }
+.text-input { width: 100%; min-height: 44px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text); }
+.text-input::placeholder { color: var(--muted); }
+.text-input[aria-invalid="true"] { border-color: var(--error-text); }
+.text-input:disabled { background: var(--soft); opacity: .8; }
