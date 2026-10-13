@@ -2,7 +2,7 @@
 
 This is the approved responsibility map used for the implementation. Source folders are now present. Small additional helpers and shared components follow the same boundaries.
 
-Two application folders: **frontend** and **backend**. Each owns its code, dependencies, settings, and tests. The root contains documentation and design previews only.
+Two application folders: **frontend** and **backend**. Each owns its code, dependencies, settings, and tests. Documentation and repository settings live at the root.
 
 ## Three governing rules
 
@@ -16,8 +16,7 @@ Review question for every module: **What does it do, why does it depend on these
 project-hub/
 ├── frontend/          React application
 ├── backend/           Python application
-├── docs/              Plan and API documentation
-└── design-previews/   Approved visual references
+└── docs/              Plan and API documentation
 ```
 
 Names use full English words that describe the job. Examples: `languages` instead of `i18n`, `demo_data` instead of `fixtures`, `connect_parts.py` instead of `wiring.py`, and `project_requests.ts` instead of `projectGateway.ts`. Required tool filenames such as `package.json` and `vite.config.ts` retain their standard names.
