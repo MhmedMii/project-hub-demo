@@ -24,6 +24,6 @@ def prepare_account_edit(account: Account, changes: AccountChanges) -> Account:
     updates = {
         field: getattr(cleaned, field)
         for field in asdict(cleaned)
-        if getattr(cleaned, field) is not None
+        if field != "expected_revision" and getattr(cleaned, field) is not None
     }
-    return replace(account, **updates)
+    return replace(account, **updates, revision=account.revision + 1)

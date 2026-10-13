@@ -7,4 +7,5 @@ export interface Account {
   role: Role;
   isActive: boolean;
   isFixed: boolean;
+  revision: number;
 }

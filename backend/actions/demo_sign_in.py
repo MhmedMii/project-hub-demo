@@ -14,8 +14,8 @@ SESSION_SECONDS = 8 * 60 * 60
 DEMO_ACCOUNTS = {Role.ADMIN: "demo-admin", Role.COUNSELOR: "demo-counselor"}
 
 
-def demo_sign_in(role: str, accounts: AccountStorage, sessions: SessionStorage) -> tuple[Session, Account]:
+def demo_sign_in(role: str, accounts: AccountStorage, sessions: SessionStorage, previous: str | None = None) -> tuple[Session, Account]:
     account = require_active_account(accounts.get(DEMO_ACCOUNTS[valid_role(role)]))
     expires_at = datetime.now(timezone.utc) + timedelta(seconds=SESSION_SECONDS)
-    session = sessions.save(Session(token_urlsafe(32), account.id, expires_at))
+    session = sessions.save(Session(token_urlsafe(32), account.id, expires_at), previous)
     return session, account

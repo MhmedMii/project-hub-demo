@@ -8,7 +8,7 @@ const project = {
   id: 'sample', title: { en: 'Planner', ar: 'المخطط' },
   description: { en: 'Plan sessions', ar: 'تخطيط الجلسات' },
   category: { en: 'Planning', ar: 'التخطيط' }, status: 'live' as const,
-  toolPath: '/demo/tools/sample', createdAt: '2026-10-12', updatedAt: '2026-10-12',
+  toolPath: '/demo/tools/sample', createdAt: '2026-10-12', updatedAt: '2026-10-12', revision: 1,
 };
 
 describe('project browsing', () => {

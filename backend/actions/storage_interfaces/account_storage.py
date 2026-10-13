@@ -1,4 +1,4 @@
-from typing import Protocol
+from typing import Callable, Protocol
 
 from backend.business_rules.account import Account
 
@@ -11,5 +11,7 @@ class AccountStorage(Protocol):
     def find_email(self, email: str) -> Account | None: ...
 
     def save(self, account: Account) -> Account: ...
+
+    def update(self, identifier: str, transform: Callable[[Account], Account]) -> Account: ...
 
     def remove(self, identifier: str) -> None: ...

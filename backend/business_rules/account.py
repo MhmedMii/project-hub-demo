@@ -11,3 +11,4 @@ class Account:
     role: Role
     is_active: bool
     is_fixed: bool
+    revision: int = 1

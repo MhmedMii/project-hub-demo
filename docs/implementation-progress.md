@@ -37,7 +37,7 @@ Spec: project-hub-demo-plan.md. Structure: project-folder-structure.md.
 - Fix: guard every logout failure update by request generation; disable repeated role-switch actions while pending.
 - Review exclusions: live visual checks were performed by the implementer; hosting/multi-process behavior is outside the agreed local demo; Obsidian remains unavailable and the confirmed brief is authoritative.
 
-## Final verification
+## Initial implementation verification
 
 - 26 backend tests passed without warnings.
 - 10 frontend tests passed.
@@ -47,3 +47,17 @@ Spec: project-hub-demo-plan.md. Structure: project-folder-structure.md.
 - English and Arabic dictionaries have 106 matching, nonempty keys.
 - Icon choices now depend on public category/status fields, avoiding embedded fixture identifiers in frontend code.
 - No review findings remain deferred.
+
+## Security remediation — 13 October 2026
+
+- The user requested an API/data/security audit, then authorized fixing its confirmed findings.
+- Atomic storage updates now resolve and change the current entity under one lock; actions own pure transformations and account safeguards. Pending edits cannot resurrect deleted records or undo concurrent subset changes.
+- Entity revisions and frontend expected_revision requests reject stale full forms with a clear conflict. Inputs remain intact until the user closes/reloads the form.
+- Sessions are pruned on expiry, replaced on repeated cookie-based login, and capped at 512. Projects/accounts are capped at 1000/500.
+- ASGI request protection bounds per-client/global quotas, quota buckets, request bodies (32 KiB), and body-reading time (10 seconds). Limits use the ASGI connection address and require explicit proxy trust when hosted.
+- Unexpected failures now finalize request counters and timing without exposing detailed errors to the browser.
+- Regression tests failed before each implementation; an initially incorrect 500-response harness was corrected and then reproduced the missing counter before its fix.
+- Independent read-only review found no Critical, Important, or Minor issues in the changes. Reviewer quota/window probes passed.
+- Final verification: 43 backend, 13 frontend, and 8 browser tests passed; both architecture checks and the frontend build passed. Dictionaries contain 111 matching nonempty keys.
+- One browser run had a Chrome-launch timeout before application assertions. A full rerun passed all eight workflows; product behavior was not changed to conceal the infrastructure failure.
+- API agreement, README, acceptance evidence, and the security audit record describe the new behavior and the remaining local-demo/hosting boundaries.

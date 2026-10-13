@@ -1,3 +1,5 @@
+from pydantic import Field
+
 from backend.server.request_data.input_model import InputModel
 from backend.server.request_data.localized_input import LocalizedInput
 
@@ -8,3 +10,4 @@ class ProjectInput(InputModel):
     category: LocalizedInput | None = None
     status: str | None = None
     private_notes: str | None = None
+    expected_revision: int | None = Field(default=None, strict=True, ge=1)

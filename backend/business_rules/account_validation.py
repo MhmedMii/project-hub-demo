@@ -35,7 +35,7 @@ def valid_role(value: str) -> Role:
 
 
 def require_account_fields(changes: AccountChanges) -> None:
-    if changes.name is None or changes.email is None:
+    if changes.name is None or changes.email is None or changes.expected_revision is not None:
         raise BusinessError("INVALID_INPUT")
 
 

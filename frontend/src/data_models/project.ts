@@ -11,4 +11,5 @@ export interface Project {
   privateNotes?: string;
   createdAt: string;
   updatedAt: string;
+  revision: number;
 }

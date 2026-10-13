@@ -8,7 +8,7 @@ import { startSession } from '../../src/user_interface/screen_state/start_sessio
 import { resolveSession } from '../../src/user_interface/screen_state/resolve_session';
 
 const session: Session = { account: { id: 'demo-counselor', name: 'Demo Counselor', email: 'counselor@demo.example',
-  role: 'counselor', isActive: true, isFixed: false }, expiresAt: '2026-10-13' };
+  role: 'counselor', isActive: true, isFixed: false, revision: 1 }, expiresAt: '2026-10-13' };
 
 it('keeps the current session when server logout fails', async () => {
   let state: SessionState = { session, isLoading: false, error: null };

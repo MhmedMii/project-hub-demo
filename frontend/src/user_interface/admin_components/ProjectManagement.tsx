@@ -25,7 +25,8 @@ export function ProjectManagement() {
   </div>{notice && <p className="notice" role="status">{translate(notice)}</p>}
     <ScreenFeedback isLoading={isLoading} error={error} isEmpty={data.length === 0} onRetry={() => { void reload(); }} />
     {!isLoading && !error && data.length > 0 && <ProjectTable projects={data} onEdit={project => setEditor({ project })} onRemove={setRemoving} />}
-    {editor && <ProjectForm project={editor.project} onClose={() => setEditor(null)} onSaved={() => finish('projectSaved')} />}
+    {editor && <ProjectForm project={editor.project} onClose={() => setEditor(null)} onSaved={() => finish('projectSaved')}
+      onReload={() => { setEditor(null); void reload(); }} />}
     {removing && <ConfirmRemoval title={translate('removeProjectTitle')} name={removing.title[language]}
       remove={() => actions.remove(removing.id)} onClose={() => setRemoving(null)} onRemoved={() => finish('projectRemoved')} />}
   </section>;

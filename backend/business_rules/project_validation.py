@@ -27,5 +27,5 @@ def valid_status(value: str) -> ProjectStatus:
 
 
 def require_project_fields(changes: ProjectChanges) -> None:
-    if changes.title is None or changes.description is None:
+    if changes.title is None or changes.description is None or changes.expected_revision is not None:
         raise BusinessError("INVALID_INPUT")

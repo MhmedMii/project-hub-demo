@@ -10,6 +10,7 @@ from backend.connections.browser_responses.session_response import session_respo
 from backend.server.current_user import current_session
 from backend.server.request_data.sign_in_input import SignInInput
 from backend.server.session_cookies import clear_session_cookie, set_session_cookie
+from backend.server.settings import SESSION_COOKIE
 
 
 router = APIRouter(prefix="/api/session")
@@ -19,7 +20,7 @@ ResolvedSession = Annotated[tuple[Session, Account], Depends(current_session)]
 @router.post("/demo-login")
 def sign_in_route(body: SignInInput, request: Request, response: Response) -> dict:
     data = request.app.state.data
-    session, account = demo_sign_in(body.role, data.accounts, data.sessions)
+    session, account = demo_sign_in(body.role, data.accounts, data.sessions, request.cookies.get(SESSION_COOKIE))
     set_session_cookie(response, session, request.app.state.settings)
     return session_response(session, account)
 

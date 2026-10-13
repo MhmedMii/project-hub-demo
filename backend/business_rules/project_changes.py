@@ -10,3 +10,4 @@ class ProjectChanges:
     category: LocalizedText | None = None
     status: str | None = None
     private_notes: str | None = None
+    expected_revision: int | None = None

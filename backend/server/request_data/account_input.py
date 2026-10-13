@@ -1,4 +1,4 @@
-from pydantic import StrictBool
+from pydantic import Field, StrictBool
 
 from backend.server.request_data.input_model import InputModel
 
@@ -8,3 +8,4 @@ class AccountInput(InputModel):
     email: str | None = None
     role: str | None = None
     is_active: StrictBool | None = None
+    expected_revision: int | None = Field(default=None, strict=True, ge=1)

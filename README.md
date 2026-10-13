@@ -47,6 +47,7 @@ The starter dataset contains **12 projects and 6 accounts**. Counselors can see 
 - Review archived projects in the admin experience.
 - Confirm removal before deleting an item.
 - Retain form inputs when a save fails.
+- Reject outdated form saves and offer a clear close-and-reload action.
 
 ### Account & Access Management
 
@@ -56,6 +57,7 @@ The starter dataset contains **12 projects and 6 accounts**. Counselors can see 
 - Protect the fixed demo admin from removal, disabling, or demotion.
 - Prevent users from removing or disabling their own account.
 - Re-check current account access and role on each API request.
+- Apply edits atomically so concurrent changes cannot silently undo access updates.
 
 Adding an account does not add another login button. Demo login continues to offer the two preset role experiences.
 
@@ -238,7 +240,7 @@ From `backend/`:
 .venv/bin/python -m pytest
 ```
 
-Checks cover API behavior, current-account access, role changes, project and account management, protected fields, restart resets, unchanged starter JSON, and dependency rules.
+Checks cover API behavior, current-account access, role changes, concurrent updates, stale forms, protected fields, request/storage limits, failure logging, restart resets, unchanged starter JSON, and dependency rules.
 
 ### Frontend
 
@@ -250,7 +252,7 @@ npm run check:architecture
 npm run build
 ```
 
-Checks cover search and filtering, form validation, request retries, session-state races, permitted dependencies, TypeScript, and the production frontend build.
+Checks cover search and filtering, form validation, edit revisions, request retries, session-state races, permitted dependencies, TypeScript, and the production frontend build.
 
 ### Browser Workflows
 
@@ -260,7 +262,7 @@ The Playwright configuration uses **Google Chrome**. Make sure Chrome and both a
 npm run test:browser
 ```
 
-The suite starts local servers when necessary and reuses servers already running. Browser workflows cover browsing, project and account changes, failed saves, changed access, Arabic layouts, mobile sizing, and theme preferences. They create and remove fictional test items in the running demo.
+The suite starts local servers when necessary and reuses servers already running. Browser workflows cover browsing, project and account changes, failed saves, stale-form conflicts, changed access, Arabic layouts, mobile sizing, and theme preferences. They create and remove fictional test items in the running demo.
 
 Verification records are maintained in [acceptance evidence](docs/acceptance-evidence.md). A past passing run does not establish the result of a later change.
 
@@ -279,9 +281,12 @@ This repository contains a **portfolio demo**, not a production identity or team
 - Restarting Python resets projects, accounts, and sessions; browser refreshes retain server data.
 - Admin saves do not modify starter JSON files, create Git commits, or contact GitHub.
 - The browser stores language and theme preferences separately from server-side demo data.
+- Login and API requests have bounded rate limits. Request bodies are capped at 32 KiB with a read deadline; demo records and sessions have capacity limits. See the [API agreement](docs/api-contract.md) for their values and deployment assumptions.
 - Local session cookies are HttpOnly and SameSite=Lax. HTTPS hosting requires secure-cookie and origin settings appropriate to that deployment.
 
 The repository's setup is for local operation. It does not include a Vercel deployment configuration.
+
+See the [security audit](docs/security-audit.md) for the original findings, remediation evidence, and remaining hosting/privacy considerations.
 
 ---
 

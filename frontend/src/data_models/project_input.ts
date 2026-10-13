@@ -7,4 +7,5 @@ export interface ProjectInput {
   category: LocalizedText;
   status: ProjectStatus;
   privateNotes: string;
+  expectedRevision?: number;
 }

@@ -5,4 +5,5 @@ export interface AccountInput {
   email: string;
   role: Role;
   isActive: boolean;
+  expectedRevision?: number;
 }

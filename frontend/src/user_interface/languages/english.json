@@ -39,6 +39,11 @@
   "SELF_REMOVAL": "You cannot remove or disable your own access.",
   "PROJECT_NOT_FOUND": "This project is unavailable.", "ACCOUNT_NOT_FOUND": "This account is unavailable.",
   "EMAIL_IN_USE": "This email already belongs to another demo account.",
+  "CONCURRENT_CHANGE": "This item changed since you opened it. Your entries are kept until you close the form. Reload to edit the latest version.",
+  "closeAndReload": "Close and reload",
+  "DEMO_CAPACITY_REACHED": "The demo is full. Remove unused records or try again later.",
+  "RATE_LIMITED": "Too many requests. Please wait before trying again.",
+  "REQUEST_TOO_LARGE": "This request is too large. Shorten your entries and try again.",
   "INVALID_INPUT": "Check your entries and try again.", "SERVER_ERROR": "Something went wrong. Please try again.",
   "NETWORK_ERROR": "The demo server could not be reached. Please try again.",
   "REQUEST_TIMEOUT": "The request took too long. Please try again.", "REQUEST_ABORTED": "The request was cancelled."

@@ -1,6 +1,9 @@
 from threading import RLock
+from typing import Callable
 
 from backend.business_rules.project import Project
+from backend.business_rules.business_errors import BusinessError
+from backend.connections.memory_storage.storage_limits import PROJECT_CAPACITY, require_available_capacity
 
 
 class MemoryProjectStorage:
@@ -18,8 +21,19 @@ class MemoryProjectStorage:
 
     def save(self, project: Project) -> Project:
         with self._lock:
+            if project.id not in self._projects:
+                require_available_capacity(len(self._projects), PROJECT_CAPACITY)
             self._projects[project.id] = project
             return project
+
+    def update(self, identifier: str, transform: Callable[[Project], Project]) -> Project:
+        with self._lock:
+            current = self._projects.get(identifier)
+            if current is None:
+                raise BusinessError("PROJECT_NOT_FOUND")
+            changed = transform(current)
+            self._projects[identifier] = changed
+            return changed
 
     def remove(self, identifier: str) -> None:
         with self._lock:

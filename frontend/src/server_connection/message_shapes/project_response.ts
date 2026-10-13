@@ -11,4 +11,5 @@ export interface ProjectResponse {
   private_notes?: string;
   created_at: string;
   updated_at: string;
+  revision: number;
 }

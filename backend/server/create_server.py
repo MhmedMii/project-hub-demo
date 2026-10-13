@@ -8,6 +8,8 @@ from backend.server.handle_errors import register_error_handlers
 from backend.server.log_requests import register_request_logging
 from backend.server.settings import Settings
 from backend.server.start_demo import start_demo
+from backend.server.request_body_limit import RequestBodyLimit
+from backend.server.request_rate_limit import RequestRateLimit
 
 
 def create_server(settings: Settings | None = None) -> FastAPI:
@@ -18,6 +20,8 @@ def create_server(settings: Settings | None = None) -> FastAPI:
     )
     application.state.settings = settings or Settings()
     register_error_handlers(application)
+    application.add_middleware(RequestBodyLimit, limits=application.state.settings.request_limits)
+    application.add_middleware(RequestRateLimit, limits=application.state.settings.request_limits)
     register_request_logging(application)
     application.include_router(session_routes)
     application.include_router(project_routes)

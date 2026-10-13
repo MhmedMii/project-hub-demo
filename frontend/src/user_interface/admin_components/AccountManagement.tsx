@@ -27,7 +27,8 @@ export function AccountManagement() {
   </div>{notice && <p className="notice" role="status">{translate(notice)}</p>}
     <ScreenFeedback isLoading={isLoading} error={error} isEmpty={data.length === 0} onRetry={() => { void reload(); }} />
     {!isLoading && !error && data.length > 0 && <AccountTable accounts={data} onEdit={account => setEditor({ account })} onRemove={setRemoving} />}
-    {editor && <AccountForm account={editor.account} onClose={() => setEditor(null)} onSaved={() => finish('accountSaved')} />}
+    {editor && <AccountForm account={editor.account} onClose={() => setEditor(null)} onSaved={() => finish('accountSaved')}
+      onReload={() => { setEditor(null); void reload(); void refresh(); }} />}
     {removing && <ConfirmRemoval title={translate('removePersonTitle')} name={removing.name}
       remove={() => actions.remove(removing.id)} onClose={() => setRemoving(null)} onRemoved={() => finish('accountRemoved')} />}
   </section>;

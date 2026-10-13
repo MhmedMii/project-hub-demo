@@ -1,4 +1,4 @@
-from typing import Protocol
+from typing import Callable, Protocol
 
 from backend.business_rules.project import Project
 
@@ -9,5 +9,7 @@ class ProjectStorage(Protocol):
     def get(self, identifier: str) -> Project | None: ...
 
     def save(self, project: Project) -> Project: ...
+
+    def update(self, identifier: str, transform: Callable[[Project], Project]) -> Project: ...
 
     def remove(self, identifier: str) -> None: ...

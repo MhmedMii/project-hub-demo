@@ -28,6 +28,6 @@ def prepare_project_edit(project: Project, changes: ProjectChanges, timestamp: s
     updates = {
         field: getattr(cleaned, field)
         for field in asdict(cleaned)
-        if getattr(cleaned, field) is not None
+        if field != "expected_revision" and getattr(cleaned, field) is not None
     }
-    return replace(project, **updates, updated_at=timestamp)
+    return replace(project, **updates, updated_at=timestamp, revision=project.revision + 1)

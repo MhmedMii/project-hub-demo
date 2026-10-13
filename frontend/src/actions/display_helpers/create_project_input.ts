@@ -6,5 +6,6 @@ export function createProjectInput(project?: Project): ProjectInput {
     title: project?.title ?? { en: '', ar: '' }, description: project?.description ?? { en: '', ar: '' },
     category: project?.category ?? { en: 'General', ar: 'عام' }, status: project?.status ?? 'live',
     privateNotes: project?.privateNotes ?? '',
+    ...(project ? { expectedRevision: project.revision } : {}),
   };
 }

@@ -15,9 +15,13 @@
 | No stale protected UI after role/identity change | keyed AuthenticatedPage subtree; screen request generations | Archived-preview and outstanding-read browser regressions |
 | Refresh retains edits; restart restores fixtures | fresh connect_parts in start_demo lifespan | Browser reload test; restart/fixture-byte tests |
 | Local fictional tool links | prepare_new_project; ToolPreviewPage | Browser navigation and archived-detail test |
-| Language/theme/mobile | LanguageSettings, ThemeSettings, logical CSS | 106 matching translation keys; RTL/dark/mobile dialog browser test |
+| Language/theme/mobile | LanguageSettings, ThemeSettings, logical CSS | 111 matching translation keys; RTL/dark/mobile dialog browser test |
 | Failure and recovery | request_once/send_request; submit_form | Read retry/write-no-retry tests; failed-save retention browser workflow |
 | Race-safe sessions | session request generations; guarded logout failures | Three session-state unit regressions |
+| Atomic edits and no delete resurrection | action-owned atomic update interface; locked current-record transformations | Concurrent role/active-state/project tests and account/project edit-delete regressions |
+| Stale browser form protection | entity revisions, expected_revision requests, conflict/reload UI | API stale-edit tests; frontend conversion tests; retained-input conflict browser workflow |
+| Bounded demo resources | session expiry/replacement/capacity; record capacities; server request quotas/body limit/deadline | Session/record storage tests, rate/body API tests, stalled-body ASGI test, independent quota probes |
+| Failed-request observability | finish_request called in finally | Unexpected 500 completion/error counter regression |
 | Readable modular code | independent frontend/backend; module ownership | Both dependency checks, 30-line/four-parameter source checks, independent review |
 | Fictional data only | backend/connections/demo_data; .example account validation | Fixture review; protected input and real-domain rejection tests |
 
@@ -27,7 +31,9 @@
 - Frontend: `npm test`, `npm run check:architecture`, `npm run build` from frontend.
 - Browser: `npm run test:browser` from frontend (local Chrome).
 
-Current result: 26 backend tests, 10 frontend tests, and 7 browser workflows passed. Frontend architecture/clean-code checks cover 114 modules; backend source checks are part of pytest. TypeScript and Vite production build passed. Independent review findings were reproduced with failing tests, fixed, and verified with the complete browser suite. No reviewer findings remain deferred.
+Current result: **43 backend tests, 13 frontend tests, and 8 browser workflows passed (64 total)**. Frontend architecture/clean-code checks cover 114 modules; backend source checks are part of pytest. TypeScript and Vite production build passed. The security audit regressions failed before their fixes. An independent review found no remaining defects in the remediation; production hosting and identity remain outside the local-demo scope.
+
+One full browser run had a Chrome-launch timeout before application assertions, with seven other workflows passing. The subsequent full run passed all eight workflows. See the [security audit and remediation evidence](security-audit.md) for findings, fixes, and deployment limitations.
 
 ## Implementation decisions
 

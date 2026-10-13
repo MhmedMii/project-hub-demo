@@ -7,4 +7,5 @@ export interface AccountResponse {
   role: Role;
   is_active: boolean;
   is_fixed: boolean;
+  revision: number;
 }
